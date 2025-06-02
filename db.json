@@ -1,0 +1,68 @@
+{
+  "menuItems": [
+    {
+      "id": "1",
+      "name": "Margherita Pizza",
+      "price": 10.99,
+      "popularity": 5
+    },
+    {
+      "id": "2",
+      "name": "Pepperoni Pizza",
+      "price": 12.5,
+      "popularity": 4
+    },
+    {
+      "id": "3",
+      "name": "Classic Burger",
+      "price": 8.75,
+      "popularity": 3
+    },
+    {
+      "id": "4",
+      "name": "Cheeseburger",
+      "price": 9.25,
+      "popularity": 4
+    },
+    {
+      "id": "5",
+      "name": "Fries",
+      "price": 3.5,
+      "popularity": 2
+    },
+    {
+      "id": "6",
+      "name": "Coke",
+      "price": 2,
+      "popularity": 1
+    }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "items": [
+        {
+          "menuItemId": 1,
+          "quantity": 2
+        },
+        {
+          "menuItemId": 5,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 25.48,
+      "status": "pending"
+    },
+    {
+      "id": "ad17",
+      "items": [
+        {
+          "menuItemId": 1,
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 10.99,
+      "status": "pending"
+    }
+  ]
+}
