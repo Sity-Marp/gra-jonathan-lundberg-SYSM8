@@ -11,20 +11,20 @@ function Navbar() {
             padding: '10px 20px',
             borderBottom: '1px solid #dee2e6'
         }}>
-            {/* Logo */}
+            {/* logo */}
             <div style={{ fontWeight: 'bold', fontSize: '1.2em' }}>
                 <Link to="/">
                     <img src={logo} alt="logo" style={{ height: '40px', cursor: 'pointer' }} />
                 </Link>
             </div>
 
-            {/* Navigation Links */}
+            {/* navigation links */}
             <div>
                 <Link to="/menu" style={{ margin: '0 15px', color: '#007bff', textDecoration: 'none' }}>
                     Menu
                 </Link>
-                <Link to="/menu" style={{ margin: '0 15px', color: '#007bff', textDecoration: 'none' }}>
-                    Menu
+                <Link to="/orders" style={{ margin: '0 15px', color: '#007bff', textDecoration: 'none' }}>
+                    🛒
                 </Link>
             </div>
         </nav>

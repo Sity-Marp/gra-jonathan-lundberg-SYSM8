@@ -27,7 +27,7 @@ function Home() {
           cursor: 'pointer'
         }}
       >
-        Go to Menu (Button)
+        Go to Menu
       </button>
     </div>
 

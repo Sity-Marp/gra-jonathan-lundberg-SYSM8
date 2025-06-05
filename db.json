@@ -4,65 +4,226 @@
       "id": "1",
       "name": "Margherita Pizza",
       "price": 10.99,
-      "popularity": 5
+      "popularity": 5,
+      "category": "pizza"
     },
     {
       "id": "2",
       "name": "Pepperoni Pizza",
       "price": 12.5,
-      "popularity": 4
+      "popularity": 4,
+      "category": "pizza"
     },
     {
       "id": "3",
       "name": "Classic Burger",
       "price": 8.75,
-      "popularity": 3
+      "popularity": 3,
+      "category": "burger"
     },
     {
       "id": "4",
       "name": "Cheeseburger",
       "price": 9.25,
-      "popularity": 4
+      "popularity": 4,
+      "category": "burger"
     },
     {
       "id": "5",
       "name": "Fries",
       "price": 3.5,
-      "popularity": 2
+      "popularity": 2,
+      "category": "sides"
     },
     {
       "id": "6",
       "name": "Coke",
       "price": 2,
-      "popularity": 1
+      "popularity": 225,
+      "category": "drinks"
+    },
+    {
+      "id": "7",
+      "name": "Pepsi",
+      "price": 2,
+      "popularity": 1,
+      "category": "drinks"
+    },
+    {
+      "id": "8",
+      "name": "Sprite",
+      "price": 2,
+      "popularity": 150,
+      "category": "drinks"
+    },
+    {
+      "id": "9",
+      "name": "Not so Classic Burger",
+      "price": 1.5,
+      "popularity": 1,
+      "category": "burger"
+    },
+    {
+      "id": "10",
+      "name": "Garlic Bread",
+      "price": 4.5,
+      "popularity": 3,
+      "category": "sides"
+    },
+    {
+      "id": "11",
+      "name": "Kiwi Chocolate Pizza",
+      "price": 6.5,
+      "popularity": 2,
+      "category": "pizza"
     }
   ],
   "orders": [
     {
-      "id": "1",
+      "id": "6eff",
       "items": [
         {
-          "menuItemId": 1,
-          "quantity": 2
+          "menuItemId": "2",
+          "quantity": 10
         },
         {
-          "menuItemId": 5,
+          "menuItemId": "5",
+          "quantity": 1
+        },
+        {
+          "menuItemId": "6",
+          "quantity": 1
+        },
+        {
+          "menuItemId": "3",
+          "quantity": 9
+        },
+        {
+          "menuItemId": "1",
+          "quantity": 1
+        },
+        {
+          "menuItemId": "4",
           "quantity": 1
         }
       ],
-      "totalPrice": 25.48,
-      "status": "pending"
+      "totalPrice": 229.49,
+      "status": "completed",
+      "customerInfo": {
+        "firstName": "qwe",
+        "lastName": "qwe",
+        "phoneNumber": "123123123",
+        "address": "qwe",
+        "paymentMethod": "cash"
+      }
     },
     {
-      "id": "ad17",
+      "id": "fb81",
       "items": [
         {
-          "menuItemId": 1,
+          "menuItemId": "2",
           "quantity": 1
         }
       ],
-      "totalPrice": 10.99,
-      "status": "pending"
+      "totalPrice": 12.5,
+      "status": "completed",
+      "customerInfo": {
+        "firstName": "qwe",
+        "lastName": "qwe",
+        "phoneNumber": "123123123",
+        "address": "qwe 123",
+        "paymentMethod": "cash"
+      }
+    },
+    {
+      "id": "5b14",
+      "items": [
+        {
+          "menuItemId": "2",
+          "quantity": 11
+        }
+      ],
+      "totalPrice": 137.5,
+      "status": "completed",
+      "customerInfo": {
+        "firstName": "TEST",
+        "lastName": "TEST",
+        "phoneNumber": "123123123",
+        "address": "TEST",
+        "paymentMethod": "card"
+      }
+    },
+    {
+      "id": "5524",
+      "items": [
+        {
+          "menuItemId": "2",
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 12.5,
+      "status": "completed",
+      "customerInfo": {
+        "firstName": "a",
+        "lastName": "a",
+        "phoneNumber": "1",
+        "address": "aedk",
+        "paymentMethod": "card"
+      }
+    },
+    {
+      "id": "8692",
+      "items": [
+        {
+          "menuItemId": "2",
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 12.5,
+      "status": "completed",
+      "customerInfo": {
+        "firstName": "1",
+        "lastName": "2",
+        "phoneNumber": "a",
+        "address": "412awd",
+        "paymentMethod": "cash"
+      }
+    },
+    {
+      "id": "e3cc",
+      "items": [
+        {
+          "menuItemId": "2",
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 12.5,
+      "status": "completed",
+      "customerInfo": {
+        "firstName": "qwe",
+        "lastName": "qwe",
+        "phoneNumber": "123123123123",
+        "address": "qwe",
+        "paymentMethod": "card"
+      }
+    },
+    {
+      "id": "449f",
+      "items": [
+        {
+          "menuItemId": "11",
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 6.5,
+      "status": "completed",
+      "customerInfo": {
+        "firstName": "qwe",
+        "lastName": "qweqwe",
+        "phoneNumber": "12123123123",
+        "address": "123",
+        "paymentMethod": "card"
+      }
     }
   ]
 }
