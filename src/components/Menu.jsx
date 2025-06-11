@@ -126,7 +126,7 @@ function Menu() {
 
   const goHome = () => navigate('/');
 
-  return (
+return (
     <div style={{ padding: '20px', backgroundColor: '#f5f5f5', minHeight: '100vh' }}>
       <h1 style={{ textAlign: 'center' }}>Menu Page</h1>
       
@@ -237,90 +237,111 @@ function Menu() {
                 backgroundColor: '#6b6b6b',
                 color: 'white',
                 borderRadius: '12px',
-                padding: '20px',
                 position: 'relative',
-                minHeight: '140px',
+                minHeight: '240px',
+                display: 'flex',
+                flexDirection: 'column',
+                overflow: 'hidden'
+              }}
+            >
+              {/* Image section - top half */}
+              <div style={{
+                height: '160px',
+                backgroundImage: item.image ? `url(${item.image})` : 'none',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                backgroundColor: '#8b8b8b',
+                position: 'relative'
+              }}>
+                {/* category badge on image */}
+                {item.category && (
+                  <div style={{
+                    position: 'absolute',
+                    top: '10px',
+                    right: '10px',
+                    backgroundColor: 'rgba(0, 0, 0, 0.7)',
+                    color: 'white',
+                    padding: '4px 8px',
+                    borderRadius: '12px',
+                    fontSize: '10px',
+                    textTransform: 'uppercase',
+                    fontWeight: 'bold'
+                  }}>
+                    {item.category}
+                  </div>
+                )}
+              </div>
+
+              {/* Content section - bottom half */}
+              <div style={{
+                padding: '15px',
+                backgroundColor: '#6b6b6b',
+                flex: 1,
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between'
-              }}
-            >
-              {/* category thingie at top right (badge?) */}
-              {item.category && (
-                <div style={{
-                  position: 'absolute',
-                  top: '10px',
-                  right: '10px',
-                  backgroundColor: 'rgba(255, 255, 255, 0.2)',
-                  padding: '4px 8px',
-                  borderRadius: '12px',
-                  fontSize: '10px',
-                  textTransform: 'uppercase',
-                  fontWeight: 'bold'
-                }}>
-                  {item.category}
-                </div>
-              )}
+              }}>
 
-              {/* item content
-              name, price, etc */}
-              <div>
-                <h3 style={{ 
-                  margin: '0 0 8px 0', 
-                  fontSize: '18px',
-                  fontWeight: 'normal'
-                }}>
-                  {item.name}
-                </h3>
-                <p style={{ 
-                  margin: '0 0 12px 0', 
-                  fontSize: '16px',
-                  fontWeight: 'bold'
-                }}>
-                  {item.price} kr
-                </p>
+                {/* item content */}
                 <div>
+                  <h3 style={{ 
+                    margin: '0 0 8px 0', 
+                    fontSize: '18px',
+                    fontWeight: 'normal'
+                  }}>
+                    {item.name}
+                  </h3>
                   <p style={{ 
-                    margin: '0 0 4px 0', 
-                    fontSize: '14px',
+                    margin: '0 0 12px 0', 
+                    fontSize: '16px',
                     fontWeight: 'bold'
                   }}>
-                    Item description
+                    {item.price} kr
                   </p>
-                  <p style={{ 
-                    margin: '0', 
-                    fontSize: '12px',
-                    color: '#cccccc',
-                    lineHeight: '1.3'
-                  }}>
-                    Lorem ipsum dolor sit amet, consectetur
-                  </p>
+                  <div>
+                    <p style={{ 
+                      margin: '0 0 4px 0', 
+                      fontSize: '14px',
+                      fontWeight: 'bold'
+                    }}>
+                      Item description
+                    </p>
+                    <p style={{ 
+                      margin: '0', 
+                      fontSize: '12px',
+                      color: '#cccccc',
+                      lineHeight: '1.3'
+                    }}>
+                      Lorem ipsum dolor sit amet, consectetur
+                    </p>
+                  </div>
                 </div>
-              </div>
 
-              {/* //add to cart button */}
-              <button
-                style={{
-                  position: 'absolute',
-                  bottom: '15px',
-                  right: '15px',
-                  width: '35px',
-                  height: '35px',
-                  borderRadius: '50%',
-                  backgroundColor: 'white',
-                  color: '#6b6b6b',
-                  border: 'none',
-                  fontSize: '20px',
-                  cursor: 'pointer',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontWeight: 'bold'
-                }}
-                onClick={() => addToCart(item)}
-              >
-                +
-              </button>
+                {/* add to cart button */}
+                <button
+                  style={{
+                    position: 'absolute',
+                    bottom: '15px',
+                    right: '15px',
+                    width: '35px',
+                    height: '35px',
+                    borderRadius: '50%',
+                    backgroundColor: 'white',
+                    color: '#6b6b6b',
+                    border: 'none',
+                    fontSize: '20px',
+                    cursor: 'pointer',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontWeight: 'bold'
+                  }}
+                  onClick={() => addToCart(item)}
+                >
+                  +
+                </button>
+              </div>
             </div>
           ))
         )}
