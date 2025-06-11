@@ -30,9 +30,20 @@ function PaymentForm() {
             });
         }
         
-        alert(`Payment successful! Total: ${orderTotal.toFixed(2)} kr`);
-       
-        navigate('/');
+        // Skicka order-data till OrderConfirmation
+        navigate('/orderconfirmation', {
+            state: {
+                order: order,
+                total: orderTotal,
+                customerInfo: {
+                    firstName: paymentData.firstName,
+                    lastName: paymentData.lastName,
+                    phoneNumber: paymentData.phoneNumber,
+                    address: paymentData.address,
+                    paymentMethod: paymentData.paymentMethod
+                }
+            }
+        });
     };
 
     const [formData, setFormData] = useState({

@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-
 function TopItems() {
     const [topItems, setTopItems] = useState([]);
-    
+   
     useEffect(() => {
         const fetchTopItems = async () => {
             try {
@@ -20,11 +19,11 @@ function TopItems() {
         };
         fetchTopItems();
     }, []);
-    
+   
     return (
         <div>
             <h2>Top Popular Items</h2>
-            {/* menu items grid 
+            {/* menu items grid
             pretty much c & p from menu, big nono.
             should write reusable code.*/}
             <div style={{
@@ -46,48 +45,65 @@ function TopItems() {
                                 backgroundColor: '#6b6b6b',
                                 color: 'white',
                                 borderRadius: '12px',
-                                padding: '20px',
                                 position: 'relative',
-                                minHeight: '140px',
+                                minHeight: '240px',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                overflow: 'hidden'
+                            }}
+                        >
+                            <div style={{
+                                height: '160px',
+                                backgroundImage: item.image ? `url(${item.image})` : 'none',
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center',
+                                backgroundRepeat: 'no-repeat',
+                                backgroundColor: '#8b8b8b'
+                            }}>
+                            </div>
+
+                            <div style={{
+                                padding: '15px',
+                                backgroundColor: '#6b6b6b',
+                                flex: 1,
                                 display: 'flex',
                                 flexDirection: 'column',
                                 justifyContent: 'space-between'
-                            }}
-                        >
-                            <div>
-                                <h3 style={{
-                                    margin: '0 0 8px 0',
-                                    fontSize: '18px',
-                                    fontWeight: 'normal'
-                                }}>
-                                    {item.name}
-                                </h3>
-                                <p style={{
-                                    margin: '0 0 12px 0',
-                                    fontSize: '16px',
-                                    fontWeight: 'bold'
-                                }}>
-                                    {item.price} kr
-                                </p>
+                            }}>
                                 <div>
+                                    <h3 style={{
+                                        margin: '0 0 8px 0',
+                                        fontSize: '18px',
+                                        fontWeight: 'normal'
+                                    }}>
+                                        {item.name}
+                                    </h3>
                                     <p style={{
-                                        margin: '0 0 4px 0',
-                                        fontSize: '14px',
+                                        margin: '0 0 12px 0',
+                                        fontSize: '16px',
                                         fontWeight: 'bold'
                                     }}>
-                                        Item description
+                                        {item.price} kr
                                     </p>
-                                    <p style={{
-                                        margin: '0',
-                                        fontSize: '12px',
-                                        color: '#cccccc',
-                                        lineHeight: '1.3'
-                                    }}>
-                                        Lorem ipsum dolor sit amet, consectetur
-                                    </p>
+                                    <div>
+                                        <p style={{
+                                            margin: '0 0 4px 0',
+                                            fontSize: '14px',
+                                            fontWeight: 'bold'
+                                        }}>
+                                            Item description
+                                        </p>
+                                        <p style={{
+                                            margin: '0',
+                                            fontSize: '12px',
+                                            color: '#cccccc',
+                                            lineHeight: '1.3'
+                                        }}>
+                                            Lorem ipsum dolor sit amet, consectetur
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
- 
                         </div>
                     ))
                 )}
@@ -95,5 +111,4 @@ function TopItems() {
         </div>
     );
 }
-
 export default TopItems;
